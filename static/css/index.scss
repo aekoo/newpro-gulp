@@ -1,0 +1,44 @@
+@import './common.scss';
+
+.fix {
+    position:fixed;
+    top:0;
+    left:0;
+    z-index: 2;
+}
+body{
+    margin: auto;
+    max-width: px2rem(750);
+}
+.main{
+    position: relative;
+    margin: px2rem(88) px2rem(44);
+    padding-bottom: px2rem(122);
+    box-shadow: 0 px2rem(4)  px2rem(16) 0 rgba(0, 0, 0, 0.1);
+    border-radius: px2rem(16);
+    .input{
+        display: flex;
+        margin: 0 px2rem(44);
+        padding: px2rem(10);
+        height: px2rem(100);
+        line-height: px2rem(100);
+        border-bottom: solid px2rem(0.5) #ccc;
+        font-size: pem(32);
+    }
+    .btn{
+        position: absolute;
+        left: px2rem(110);
+        bottom: px2rem(-44);
+        width: px2rem(440);
+        height: px2rem(88);
+        line-height: px2rem(88);
+        border-radius: px2rem(44);
+        background-color: #ee4f4f;
+        letter-spacing: px2rem(4);
+        text-align: center;
+        color: #fff;
+    }
+    .btn-on{
+        opacity: 0.8;
+    }
+}

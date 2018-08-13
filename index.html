@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <title>Speak</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="main">
+      <div class="input">
+        <input type="text" id="text" value="Speak" placeholder="Speak">
+      </div>
+      <div class="btn">播放</div>
+    </div>
+    <script>
+        var documentElement = document.documentElement;
+        function callback() {
+            var clientWidth = documentElement.clientWidth;
+            clientWidth = clientWidth < 780 ? clientWidth : 780;
+            documentElement.style.fontSize = clientWidth / 10 + 'px';
+        }
+        document.addEventListener('DOMContentLoaded',callback)
+        window.addEventListener('orientationchange' in window ? 'orientationchange' : 'resize',callback)
+    </script>
+    <script src="./lib/zepto.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
