@@ -21,6 +21,7 @@
   "devDependencies": {
     "babel-core": "^6.26.3",
     "gulp-autoprefixer": "^4.0.0",
+    "gulp-rem-plugin": "0.0.1",
     "gulp-rev": "^8.1.1",
     "gulp-rev-collector": "^1.2.3",
     "gulp-sync": "^0.1.4",

@@ -1,5 +1,6 @@
 var gulp = require('gulp')
 var sass=  require('gulp-sass')
+var px2rem = require('gulp-rem-plugin')
 var uglify = require('gulp-uglify')
 var browserSync = require('browser-sync').create()
 var runSequence = require('run-sequence')
@@ -30,6 +31,7 @@ const staticPath = `${filePath}/static/**`
 gulp.task('sass', ()=> {
 	return gulp.src(`${staticPath}/*.{scss,sass,css}`)
 		.pipe(sass().on('error', sass.logError))
+    .pipe(px2rem({'width_design': 750}))
 		.pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
