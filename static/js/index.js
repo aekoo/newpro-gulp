@@ -61,6 +61,7 @@ function speak(message) {
 function bindEvent() {
   $('.btn').click(function () {
     var text = $('#text').val();
+    alert('speak');
     speak(text);
   });
 }
