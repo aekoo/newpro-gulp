@@ -14,11 +14,12 @@ const rm = require('rimraf').sync
 const rev = require('gulp-rev')
 const revCollector = require('gulp-rev-collector')
 const argv = process.argv
-// 11011
-const proxyOption = proxy('/chargebook', {
+
+const proxyOption = proxy('/appapi', {
 	target: 'http://10.0.52.31',
 	changeOrigin: true,
 })
+
 let file = (argv[2] && argv[2].replace(/^-*/g, '')) || './'
 rm(path.join(process.cwd(), 'dist'));
 const filePath = path.resolve(__dirname, file)
@@ -26,7 +27,7 @@ if (!exists(filePath)) {
 	console.log(chalk.red('项目不存在'))
 	return
 }
-const htmlPath = `${filePath}/*.html`
+const htmlPath = `${filePath}/static/*.html`
 const staticPath = `${filePath}/static/**`
 gulp.task('sass', () => {
 	return gulp.src(`${staticPath}/*.{scss,sass,css}`)
@@ -35,7 +36,9 @@ gulp.task('sass', () => {
 			browsers: ['last 2 versions'],
 			cascade: false
 		}))
-		.pipe(px2rem({ 'width_design': 750 }))
+		.pipe(px2rem({
+			'width_design': 750
+		}))
 		.pipe(gulp.dest('dist'))
 });
 gulp.task('html', () => {
@@ -55,6 +58,7 @@ gulp.task('rev', () => {
 gulp.task('server', () => {
 	browserSync.init({
 		server: 'dist',
+		ghostMode: false, //设备是否同步刷新
 		middleware: [proxyOption]
 	});
 });
@@ -76,7 +80,7 @@ gulp.task('js:lib', () => {
 		.pipe(gulp.dest('dist'))
 });
 gulp.task('images', () => {
-	return gulp.src(`${staticPath}/*.{png,jpg,jpeg,ico}`)
+	return gulp.src(`${staticPath}/*.{png,jpg,jpeg,ico,gif}`)
 		.pipe(gulp.dest('dist'));
 });
 // 开启重刷新

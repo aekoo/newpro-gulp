@@ -1,7 +1,7 @@
 {
-  "name": "newpro-gulp",
+  "name": "newpro",
   "version": "1.0.0",
-  "description": "创建一个新的移动端H5 gulp项目",
+  "description": "new",
   "main": "index.js",
   "author": "aekoo",
   "license": "ISC",

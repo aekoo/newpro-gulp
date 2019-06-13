@@ -1,0 +1,243 @@
+html{width: 100%; height: 100%;}
+body,button,dd,dl,dt,figure,h1,h2,h3,h4,h5,html,input,li,p,select,span,strong,textarea,u,ul{margin:0;padding:0}
+body{margin: auto; width: 750px; height: 100%; user-select: none;background: #f0f2f5;font-family:"arial,Microsoft YaHei,Helvetica,sans-serif";font-size:16px;-webkit-tap-highlight-color:transparent;-webkit-font-smoothing:antialiased}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:400}
+h1,h2,h3,h4,h5,h6{font-weight:400}
+a{text-decoration: none;}
+ul,ol {list-style: none;}
+img{width: 100%;height: 100%;}
+input{border: none;outline: none;font-size: 30px;}
+input::-webkit-input-placeholder{color: #999;}
+#cnzz_stat_icon_1277381284>a{display: none;}
+
+.fl{float:left}
+.fr{float:right}
+.clearfix{zoom:1}
+.clearfix:after{content:'.';display:table;height:0;clear:both;visibility:hidden}
+.hidden{visibility:hidden}
+.none{display:none}
+
+
+.show {
+  display: block !important;
+}
+.noScroll {
+  overflow: hidden !important;position: fixed;margin-left:-375px;left:50%;top:0;
+}
+
+/*分享*/
+#maskDiv {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, .8);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 304px;
+  /*display: none*/
+}
+#shareImg{
+  position:fixed;
+  z-index:1001;
+  top:22px;
+  right:46px;
+  width:402px;
+  height:auto;
+}
+
+@-webkit-keyframes boxfade {
+  0% { opacity: 1; -webkit-transform: scale(0.5) }
+  10% { opacity: 1; -webkit-transform: scale(1.1) }
+  20% { opacity: 1; -webkit-transform: scale(1) }
+  100% { opacity: 1; -webkit-transform: scale(1) }
+}
+.alertBox{
+  position:fixed;
+  width: 600px;
+  margin-left: -300px;
+  top:70%;
+  left:50%;
+  z-index:10001;
+  border-radius:0.133333rem;
+  background:#000;
+  color:#fff;
+  text-align:center;
+  font-size:0.4rem;
+  line-height:0.666666rem;
+  padding:0.266666rem;
+  box-sizing: border-box;
+  animation:boxfade 2s ease;
+}
+
+.loading{
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-50%);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 50%;
+  z-index: 9999;
+}
+.dots {
+  position: fixed;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  animation: rotate 1.6s linear infinite;
+  z-index: 9999;
+}
+
+.white {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  animation: flash 1.6s linear infinite;
+  opacity: 0;
+}
+
+.dot {
+  position: absolute;
+  margin: auto;
+  width: 38px;
+  height: 38px;
+  border-radius: 100%;
+  transition: all 1s ease;
+}
+
+.dot:nth-child(2) {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: #FF4444;
+  animation: dotsY 1.6s linear infinite;
+}
+
+.dot:nth-child(3) {
+  left: 0;
+  right: 0;
+  top: 0;
+  background: #FFBB33;
+  animation: dotsX 1.6s linear infinite;
+}
+
+.dot:nth-child(4) {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: #99CC00;
+  animation: dotsY 1.6s linear infinite;
+}
+
+.dot:nth-child(5) {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #33B5E5;
+  animation: dotsX 1.6s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  10% {
+    width: 100px;
+    height: 100px;
+  }
+
+  66% {
+    width: 38px;
+    height: 38px;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@keyframes dotsY {
+  66% {
+    opacity: .1;
+    width: 38px;
+  }
+
+  77% {
+    opacity: 1;
+    width: 0;
+  }
+}
+
+@keyframes dotsX {
+  66% {
+    opacity: .1;
+    height: 38px;
+  }
+
+  77% {
+    opacity: 1;
+    height: 0;
+  }
+}
+
+@keyframes flash {
+  33% {
+    opacity: 0;
+    border-radius: 0%;
+  }
+
+  55% {
+    opacity: .6;
+    border-radius: 100%;
+  }
+
+  66% {
+    opacity: 0;
+  }
+}
+
+
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+}

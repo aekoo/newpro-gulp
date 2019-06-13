@@ -1,11 +1,19 @@
 .DS_Store
+.classpath
 .project
+.iml
+.settings/
 .svn/
-
+.externalToolBuilders/
+.idea/
+.compiled/
+.next/
 test/
 dist/
 node_modules/
 logs/
+
+!lib/
 
 *.zip
 *.tar.gz

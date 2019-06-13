@@ -1,0 +1,68 @@
+@import "./common.scss";
+
+.container {
+  min-height: 100%;
+  background: #fff;
+  overflow: auto;
+
+  .banner {
+    margin: 50px auto;
+    width: 268px;
+    height: 268px;
+  }
+  .register {
+    padding: 20px 30px;
+    overflow: hidden;
+
+    li {
+      display: flex;
+      margin: 20px auto;
+      height: 90px;
+      border: 1px solid #e0e0df;
+      border-radius: 4px;
+      overflow: auto;
+      &:last-child {
+        position: relative;
+        margin-top: 40px;
+      }
+
+      .icon1 {
+        width: 29px;
+        height: 43px;
+        padding: 23px 36px;
+      }
+      .icon2 {
+        width: 30px;
+        height: 38px;
+        padding: 23px 36px;
+      }
+      .interCode {
+        margin: 23px 36px 23px 0;
+        padding-right: 36px;
+        font-size: 30px;
+        color: #999;
+        border-right: 1px solid #e0e0df;
+      }
+
+      input {
+        line-height: 42px;
+        padding: 12px 0;
+      }
+    }
+  }
+
+  .btn {
+    margin: 10px 30px;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+    font-size: 36px;
+    color: #fff;
+    border-radius: 4px;
+    background: #22bd7a;
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}
