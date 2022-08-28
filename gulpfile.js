@@ -1,6 +1,6 @@
 var gulp = require('gulp')
 var sass = require('gulp-sass')
-var px2rem = require('gulp-rem-plugin')
+var px2rem = require('gulp-px2rem-plugin')
 var uglify = require('gulp-uglify')
 var browserSync = require('browser-sync').create()
 var runSequence = require('run-sequence')
